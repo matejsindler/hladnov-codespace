@@ -4,7 +4,11 @@ let had = [document.querySelector('.had')]
 function pohniHadem(dolu, doprava) {
   const hadiHlava = had[0]
   console.log("Had je na " + hadiHlava.id);
+  const hadiHlava = had[0]
+  console.log("Had je na " + hadiHlava.id);
 
+  let radek = parseInt(hadiHlava.id.split(":")[0]);
+  let sloupec = parseInt(hadiHlava.id.split(":")[1]);
   let radek = parseInt(hadiHlava.id.split(":")[0]);
   let sloupec = parseInt(hadiHlava.id.split(":")[1]);
   const idCil = radek + dolu + ":" + (sloupec + doprava);
