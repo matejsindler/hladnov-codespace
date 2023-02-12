@@ -1,4 +1,5 @@
-let had = [document.querySelector(".had")]
+
+let had = [document.querySelector('.had')]
 
 const noveTlacitko = document.getElementById("tlacitko")
 noveTlacitko.addEventListener("click", zmenaMrizsky)
@@ -21,7 +22,7 @@ function zmenaMrizsky() {
       novyDiv.classList.add("pole");
       novyDiv.id = noveX + ":" + noveY
       mrizka.append(novyDiv);
-      console.log("Přidám div s id" + novyDiv.id)
+      console.log("Přidám div s id" + novyDiv.id);
       mrizka.append(" ");
     }
     const noveBr = document.createElement("br");
@@ -34,25 +35,42 @@ function zmenaMrizsky() {
 function pohniHadem(dolu, doprava) {
   const hadiHlava = had[0]
   console.log("Had je na " + hadiHlava.id);
+  const hadiHlava = had[0]
+  console.log("Had je na " + hadiHlava.id);
 
+  let radek = parseInt(hadiHlava.id.split(":")[0]);
+  let sloupec = parseInt(hadiHlava.id.split(":")[1]);
   let radek = parseInt(hadiHlava.id.split(":")[0]);
   let sloupec = parseInt(hadiHlava.id.split(":")[1]);
   const idCil = radek + dolu + ":" + (sloupec + doprava);
   console.log("Had bude na " + idCil);
 
-  const cilovePolicko = document.getElementById(idCil);
+  const cil = document.getElementById(idCil);
 
-  had.unshift(cilovePolicko);
+  had.unshift(cil)
 
-  cilovePolicko.classList.add("had");
+  cil.classList.add("had");
 
-  if (cilovePolicko.classList.contains("zradlo")) {
-    console.log("Had bude žrát");
-    cilovePolicko.classList.remove("zradlo");
-  } else {
-    const polickoKterePrestavaBytHadem = had.pop();
-    polickoKterePrestavaBytHadem.classList.remove("had");
+  if (cil.classList.contains ("zradlo")) {
+    console.log("Had bude zrat");
+    cil.classList.remove("zradlo");
+    const pol1 = Math.floor(Math.random() *5 + 1)
+    const pol2 = Math.floor(Math.random() *5 + 1)
+    const idzradlo = pol1 + ":" + pol2
+    console.log(pol1 + ":" + pol2)
+
+    const zradloid
+
+
+
+  }else{
+    const polenenihadem = had.pop();
+    polenenihadem.classList.remove("had")
   }
+
+  const jidlo = document.getElementById(".zradlo");
+  
+
 }
 
 let posledniKlavesa = 0;
@@ -87,7 +105,11 @@ function pohyb() {
 
 
 
+<<<<<<< HEAD
 
 
 
 document.addEventListener("keydown", autopohyb);
+=======
+document.addEventListener("keydown", pohyb);
+>>>>>>> 671e60421c2fa1438ff107f870dbc4b064728d61

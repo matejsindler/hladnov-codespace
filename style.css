@@ -1,7 +1,12 @@
 .pole {
   border: 1px solid black;
+<<<<<<< HEAD
   height: 50px;
   width: 50px;
+=======
+  height: 100px;
+  width: 100px;
+>>>>>>> 671e60421c2fa1438ff107f870dbc4b064728d61
   display: inline-block;
 }
 
@@ -21,6 +26,11 @@ body {
   overflow: hidden;
 }
 
+<<<<<<< HEAD
 body{
   position:relative; left:500px; top:100px;
+=======
+.zradlo{
+  background-color: aqua;
+>>>>>>> 671e60421c2fa1438ff107f870dbc4b064728d61
 }
